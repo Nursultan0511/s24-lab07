@@ -11,8 +11,11 @@ public class Road {
     public Road(boolean[] occupied) {
         this.occupied = occupied;
     }
+    public boolean isOccupied ( int position){
+        return position >=0 && position < occupied.length && occupied[position];
 
-    public boolean[] getOccupied() {
-        return this.occupied;
+    }
+    public boolean isValid(int position){
+        return position >= 0 && position < occupied.length;
     }
 }
